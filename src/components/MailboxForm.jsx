@@ -33,13 +33,14 @@ const MailboxForm = (props) => {
 					value={formData.name}
 					name="boxholder"
 				/>
-				<label for="">Box Size: </label>
-				<input
-					type="number"
-					onChange={handleChange}
-					value={formData.weight}
-					name="boxsize"
-				/>
+
+                <label for="boxsize">Box Size:</label>
+    <select name="boxsize" id="boxsize">
+        <option value="Disabled" selected disabled>-</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+    </select>
 				<button>Add Mailbox</button>
 			</form>
 		</>

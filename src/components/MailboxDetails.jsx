@@ -16,7 +16,7 @@ const MailboxDetails = (props) => {
 			<h2>Mailbox Detail</h2>
 			<hr />
 			<p><strong>Box Holder:</strong> {singleMailbox.boxholder}</p>
-			<p><strong>Box Size:</strong> {singleMailbox.boxsize} KG</p>
+			<p><strong>Box Size:</strong> {singleMailbox.boxsize} </p>
 
 			
 		</>

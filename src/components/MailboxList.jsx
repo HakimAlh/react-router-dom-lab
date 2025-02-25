@@ -4,7 +4,7 @@ const MailboxList = (props) => {
     console.log('prop!: ', props)
 	return (
 		<>
-			<h2>Mailboxes:</h2>
+			<h2>Post Office:</h2>
 			<ul>
 				{props.mailbox.map((mail) => (
 					<li key={mail.boxholder}>

@@ -13,11 +13,10 @@ import { BrowserRouter } from 'react-router-dom'
 const App = () => {
 
   
-// src/App.jsx
 const initialState = [
-  { _id: 1, boxholder: 'Micheal', boxsize: 25},
-  { _id: 2, boxholder: 'Bob', boxsize: 30},
-  { _id: 3, boxholder: 'Mark', boxsize: 63},
+  { _id: 1, boxholder: 'Micheal', boxsize: 'Medium'},
+  { _id: 2, boxholder: 'Bob', boxsize: 'Large'},
+  { _id: 3, boxholder: 'Mark', boxsize: 'Medium'},
   
   
 ]
