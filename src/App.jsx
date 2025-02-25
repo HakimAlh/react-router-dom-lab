@@ -6,6 +6,9 @@ import MailboxList from './components/MailboxList'
 import NavBar from './components/NavBar'
 import { Link, Routes, Route } from "react-router-dom"
 
+import { BrowserRouter } from 'react-router-dom'
+
+
 
 // src/App.jsx
 const initialState = [
@@ -27,5 +30,6 @@ const App = () => {
  
   )
 };
+
 
 export default App;
