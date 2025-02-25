@@ -1,6 +1,7 @@
 import { Link, Routes, Route } from "react-router-dom";
 
 const MailboxList = (props) => {
+    console.log('prop!: ', props)
 	return (
 		<>
 			<h2>Mailboxes:</h2>
