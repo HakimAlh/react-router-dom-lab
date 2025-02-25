@@ -9,11 +9,12 @@ const MailboxForm = (props) => {
 
     const initialState = {
         name: '',
-        weight: 0,
-        height: 0,
+        boxsize: 0,
     }
 
     const [formData, setFormData] = useState(initialState)
+    
+    const [mailbox, setMailbox] = useState (initialState)
 
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value})
@@ -31,26 +32,19 @@ const MailboxForm = (props) => {
     return (
         <>
         <form onSubmit={handleSubmit}>
-        <label for="">Name:  </label>
+        <label for="">Box Holder:  </label>
         <input 
         type="text" 
         onChange={handleChange}
         value={formData.name}
-        name="name"
+        name="boxholder"
         />
-         <label for="">Weight:  </label>
+         <label for="">Box Size:  </label>
         <input 
         type="number" 
         onChange={handleChange}
         value={formData.weight}
-         name="weight"
-        />
-          <label for="">Height:  </label>
-        <input 
-        type="number" 
-        onChange={handleChange}
-        value={formData.height}
-         name="height"
+         name="boxsize"
         />
         <button>Add Mailbox</button>
         </form>

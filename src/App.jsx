@@ -10,6 +10,9 @@ import { BrowserRouter } from 'react-router-dom'
 
 
 
+const App = () => {
+
+  
 // src/App.jsx
 const initialState = [
   { _id: 1, boxholder: 'Micheal', boxsize: 25},
@@ -19,14 +22,25 @@ const initialState = [
   
 ]
 
+const [mailbox, setMailbox] = useState(initialState)
 
+const addMailbox = (newMailbox) => {
+  newMailbox._id = mailbox.length + 1;
+  setMailbox([...mailbox, newMailbox]);
+};
 
-const App = () => {
   return (
     <>
     <NavBar />
-    <MailboxList />
+    <Routes>
+    <Route path={'/'} element={<h2>Hola Amigo this le home</h2>} /> 
+    <Route path={'/mailboxes'} element={<MailboxList mailbox={mailbox} />} />
+    <Route path={'/mailboxes/new'} element={<MailboxForm addMailbox={addMailbox} />} />
+    <Route path={'/mailboxes/:mailboxesId'} element={<p>{<MailboxDetails mailbox={mailbox}/>}</p>} />
+    <Route path={'*'} element={404} />
+    </Routes>
     </>
+    
  
   )
 };
